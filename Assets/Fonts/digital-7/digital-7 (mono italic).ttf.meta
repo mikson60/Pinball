@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0b3855ac19209534086ce1f5299a8029
+timeCreated: 1515700129
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Digital-7 Mono
+  fontNames:
+  - Digital-7 Mono
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
