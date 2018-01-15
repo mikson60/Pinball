@@ -4,6 +4,8 @@ public class ScoreManager : MonoBehaviour {
 
     public static ScoreManager Instance;
 
+    [SerializeField] GameObject ballPrefab;
+
     [SerializeField] TextMesh m_textMeshP1;
     [SerializeField] TextMesh m_textMeshP2;
 
@@ -33,11 +35,13 @@ public class ScoreManager : MonoBehaviour {
     {
         m_scoreP1++;
         UpdateScoreTextP1(m_scoreP1);
+        CheckScore(m_scoreP1);
     }
     public void AddScoreP2()
     {
         m_scoreP2++;
         UpdateScoreTextP2(m_scoreP2);
+        CheckScore(m_scoreP2);
     }
 
     void UpdateScoreTextP1(int newScore)
@@ -47,5 +51,22 @@ public class ScoreManager : MonoBehaviour {
     void UpdateScoreTextP2(int newScore)
     {
         m_textMeshP2.text = newScore.ToString();
+    }
+
+    void CheckScore(int score)
+    {
+        if (score % 10 == 0)
+        {
+            SpawnBall();
+        }
+    }
+
+    void SpawnBall()
+    {
+        Ball ball = Instantiate(ballPrefab).GetComponent<Ball>();
+        if (ball != null)
+        {
+            ball.ResetBall();
+        }
     }
 }

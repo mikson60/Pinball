@@ -60,7 +60,7 @@ public class Ball : MonoBehaviour {
         }
     }
 
-    void ResetBall()
+    public void ResetBall()
     {
         m_rb.velocity = Vector3.zero;
         m_rb.angularVelocity = Vector3.zero;
